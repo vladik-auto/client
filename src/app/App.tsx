@@ -7,7 +7,7 @@ import { useGetMe } from '@entities/user';
 
 export const App = ({ children }: { children: ReactNode }) => {
     const { theme } = useTheme();
-    useGetMe();
+    // useGetMe();
     return <div className={classNames('app', {}, [theme])}>
         <>
             <ToastContainer

@@ -93,6 +93,18 @@
     color: var(--black);
   }
 
+  &.text {
+    color: var(--text);
+
+    &:hover {
+      color: var(--text);
+    }
+
+    &:active {
+      color: var(--text);
+    }
+  }
+
   &.h1 {
     font: var(--paragraph-1);
   }

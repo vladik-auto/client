@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  gap: 20px;
+
+  .video {
+    flex: 1 1 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .events {
+    max-width: 30%;
+    width: 100%;
+  }
+}
