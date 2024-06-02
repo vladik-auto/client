@@ -1,5 +1,5 @@
 import { createBrowserRouter, redirect } from 'react-router-dom';
-import { LoginPage, MainPage, RegisterPage, StatisticsPage, UploadPage } from '@pages/ui';
+import { LoginPage, MainPage, MyPage, RegisterPage, StatisticsPage, UploadPage } from '@pages/ui';
 import { Toolbar } from '@widgets/ui';
 
 export const router = createBrowserRouter([
@@ -18,6 +18,10 @@ export const router = createBrowserRouter([
             {
                 path: 'statistics',
                 element: <StatisticsPage />,
+            },
+            {
+                path: 'user',
+                element: <MyPage />,
             },
         ],
     },

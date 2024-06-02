@@ -59,13 +59,13 @@ export const Upload: React.FC<UploadProps> = (props) => {
     const handleConfirmClick = async () => {
         if (videoFile) {
             dispatch(changeVideoProcessing(true));
-            openWebSocket(); // Открываем WebSocket соединение
-            extractFrames();
+            await openWebSocket(); // Открываем WebSocket соединение
+            await extractFrames();
+            await sendBlobs(blobs);
         }
-        await sendBlobs(blobs);
     };
 
-    const openWebSocket = () => {
+    const openWebSocket = async () => {
         const newSocket = new WebSocket(`${import.meta.env.VITE_SERVER_WS}/video/ws/videoinput`);
         newSocket.onopen = () => {
             console.log('WebSocket connection opened');

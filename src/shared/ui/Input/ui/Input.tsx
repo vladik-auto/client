@@ -5,9 +5,9 @@ import { BorderEnum, classNames, ColorEnum, SizeEnum, useDebounce } from '@share
 import { Paragraph } from '@shared/ui';
 
 export const Input = ({
-                          color = ColorEnum.BLACK,
+                          color = ColorEnum.TEXT,
                           border = BorderEnum.H1,
-                          bgColor = ColorEnum.WHITE,
+                          bgColor = ColorEnum.TEXT,
                           value,
                           size = SizeEnum.H1,
                           label,
@@ -44,6 +44,8 @@ export const Input = ({
                     // ЦВЕТА
                     [cls.whiteBg]: bgColor === ColorEnum.WHITE,
                     [cls.blackBg]: bgColor === ColorEnum.BLACK,
+                    [cls.textBg]: bgColor === ColorEnum.TEXT,
+                    [cls.text]: color === ColorEnum.TEXT,
                     [cls.primary]: borderColor === ColorEnum.PRIMARY,
                     [cls.secondary]: borderColor === ColorEnum.SECONDARY,
                     [cls.white]: color === ColorEnum.WHITE,

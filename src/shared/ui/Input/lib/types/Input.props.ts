@@ -10,7 +10,7 @@ export interface IInputProps extends Omit<
     size?: SizeEnum;
     borderColor?: ColorEnum;
     bgColor?: ColorEnum;
-    color?: ColorEnum.BLACK | ColorEnum.WHITE;
+    color?: ColorEnum;
     border?: BorderEnum;
     value: string;
     name?: string;
