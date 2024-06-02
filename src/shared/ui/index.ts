@@ -5,3 +5,5 @@ export * from './ThemeSwitcher';
 export * from './NavigationList';
 export * from './Upload';
 export * from './TimeLine';
+export * from './Select';
+export * from './Tab';

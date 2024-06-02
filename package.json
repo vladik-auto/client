@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ant-design/charts": "^2.1.1",
+    "@ant-design/plots": "^2.2.2",
     "@ffmpeg/ffmpeg": "^0.12.10",
     "@ffmpeg/util": "^0.12.1",
     "@reduxjs/toolkit": "^2.1.0",

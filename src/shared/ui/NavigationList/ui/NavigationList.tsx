@@ -14,8 +14,8 @@ export const NavigationList = () => {
             to: '/main',
         },
         {
-            label: 'Главная3',
-            to: '/main',
+            label: 'Статистика',
+            to: '/statistics',
         },
         {
             label: 'Загрузка видео',

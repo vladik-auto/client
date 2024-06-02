@@ -1,9 +1,10 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  width: 100%;
   max-width: 1120px;
+  min-width: 1120px;
   max-height: 630px;
+  width: 100%;
   .placeholder {
     display: flex;
     flex-direction: column;

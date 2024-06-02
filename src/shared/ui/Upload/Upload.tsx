@@ -62,11 +62,9 @@ export const Upload: React.FC<UploadProps> = (props) => {
             openWebSocket(); // Открываем WebSocket соединение
             extractFrames();
         }
-    };
-
-    const handleSubmitClick = async () => {
         await sendBlobs(blobs);
     };
+
     const openWebSocket = () => {
         const newSocket = new WebSocket(`${import.meta.env.VITE_SERVER_WS}/video/ws/videoinput`);
         newSocket.onopen = () => {
@@ -190,24 +188,8 @@ export const Upload: React.FC<UploadProps> = (props) => {
                             >
                                 Обработать
                             </Button>
-                            <Button
-                                size={SizeEnum.H2}
-                                color={ColorEnum.WHITE}
-                                border={BorderEnum.H5}
-                                bgColor={ColorEnum.PRIMARY}
-                                onClick={handleSubmitClick}
-                            >
-                                Отправить
-                            </Button>
                         </div>
                     </div>
-                    <ul>
-                        {blobs.map((blob, index) => (
-                            <li key={index}>
-                                <img src={URL.createObjectURL(blob)} alt={`Frame ${index}`} />
-                            </li>
-                        ))}
-                    </ul>
                 </>
             )}
         </div>
